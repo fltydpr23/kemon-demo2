@@ -225,22 +225,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 md:py-36 px-5 md:px-12 bg-kemon-bg flex justify-center">
-        <div className="w-full max-w-[1400px] bg-[#F4611A] rounded-sm p-12 md:p-20 relative overflow-hidden rv flex flex-col md:flex-row md:items-center justify-between">
+      <section className="py-24 md:py-36 px-4 sm:px-5 md:px-12 bg-kemon-bg flex justify-center">
+        <div className="w-full max-w-[1400px] bg-[#F4611A] rounded-sm p-8 sm:p-12 md:p-20 relative overflow-hidden rv flex flex-col md:flex-row md:items-center justify-between">
             <h2 className="absolute -right-10 top-1/2 -translate-y-1/2 font-bebas text-[15rem] leading-none text-black/[0.04] select-none pointer-events-none tracking-tighter hidden md:block">KEMON</h2>
             
             <div className="relative z-10 flex flex-col items-start text-black">
-                <p className="text-[0.65rem] tracking-[0.25em] uppercase text-black/70 mb-6 font-medium">// LIMITED DROPS · FREE SHIPPING ABOVE ₹499</p>
-                <h2 className="font-bebas text-6xl md:text-8xl tracking-wide uppercase leading-[0.9] mb-6">
+                <p className="text-[0.6rem] md:text-[0.65rem] tracking-[0.25em] uppercase text-black/70 mb-4 md:mb-6 font-medium">// LIMITED DROPS · FREE SHIPPING ABOVE ₹499</p>
+                <h2 className="font-bebas text-5xl sm:text-6xl md:text-8xl tracking-wide uppercase leading-[0.9] mb-6">
                     YOUR FEET<br/>DESERVE THIS
                 </h2>
-                <p className="text-black/80 text-sm md:text-base font-light tracking-wide mb-10 md:mb-0">
+                <p className="text-black/80 text-xs sm:text-sm md:text-base font-light tracking-wide mb-10 md:mb-0">
                     Step into premium. Orders above ₹499 ship free across India.
                 </p>
             </div>
             
             <div className="relative z-10">
-                <button onClick={() => navigate('/shop')} className="clickable bg-kemon-bg text-kemon-cream px-10 py-5 rounded-full text-[0.7rem] tracking-[0.2em] font-medium uppercase hover:bg-black transition-colors whitespace-nowrap">
+                <button onClick={() => navigate('/shop')} className="clickable bg-kemon-bg text-kemon-cream px-8 sm:px-10 py-4 sm:py-5 rounded-full text-[0.65rem] sm:text-[0.7rem] tracking-[0.2em] font-medium uppercase hover:bg-black transition-colors whitespace-nowrap">
                     SHOP KEMON.IN →
                 </button>
             </div>
