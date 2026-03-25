@@ -46,7 +46,10 @@ export default function CartDrawer() {
                       <span className="text-xs w-4 text-center">{item.quantity}</span>
                       <button onClick={() => updateQuantity(item.id, item.size, 1)} className="hover:text-kemon-orange"><Plus size={14}/></button>
                     </div>
-                    <p className="font-playfair italic text-kemon-orange">₹{item.price * item.quantity}</p>
+                    <div className="text-right">
+                      <p className="font-playfair italic text-kemon-soft/50 line-through text-[0.7rem]">₹{item.mrp * item.quantity}</p>
+                      <p className="font-playfair italic text-kemon-orange">₹{item.price * item.quantity}</p>
+                    </div>
                   </div>
                 </div>
               </div>

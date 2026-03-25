@@ -17,7 +17,7 @@ export default function App() {
         <CustomCursor />
         <div className="fixed top-0 left-0 right-0 h-[26px] bg-kemon-orange overflow-hidden flex items-center z-[600]">
           <div className="flex whitespace-nowrap animate-tick">
-            <span className="px-10 text-[0.62rem] tracking-[0.22em] uppercase font-medium text-kemon-bg">FREE SHIPPING ON ORDERS ABOVE ₹499 ★ SPORTS · RUNNER · BAMBOO · CREW · INVISIBLE ★ ENGINEERED IN TIRUPUR — INDIA'S SOCK CAPITAL ★ FREE SHIPPING ON ORDERS ABOVE ₹499 ★ SPORTS · RUNNER · BAMBOO · CREW · INVISIBLE ★ ENGINEERED IN TIRUPUR — INDIA'S SOCK CAPITAL ★</span>
+            <span className="px-10 text-[0.62rem] tracking-[0.35em] uppercase font-medium text-kemon-bg">COMPLIMENTARY SHIPPING OVER ₹499 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✦&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE BUNDLE EVENT: BUY 3 GET 3 FREE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✦&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENGINEERED FOR EXCELLENCE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✦&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMPLIMENTARY SHIPPING OVER ₹499 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✦&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE BUNDLE EVENT: BUY 3 GET 3 FREE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✦&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENGINEERED FOR EXCELLENCE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✦&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           </div>
         </div>
         <Navbar />

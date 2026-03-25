@@ -71,7 +71,6 @@ export default function Home() {
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent flex flex-col justify-end p-5 transform translate-y-2 transition-transform duration-300 group-hover:translate-y-0">
                 <h3 className="font-bebas text-2xl tracking-wider text-kemon-cream">{p.name}</h3>
-                <p className="font-playfair italic text-kemon-orange text-base mt-2">₹{p.price}</p>
               </div>
             </div>
           ))}

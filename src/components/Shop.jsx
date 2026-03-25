@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { X, Gift } from 'lucide-react';
 import { products } from '../data/products';
 
 export default function Shop() {
   const [filter, setFilter] = useState('ALL');
+  const [showPromo, setShowPromo] = useState(false);
   const filtered = filter === 'ALL' ? products : products.filter(p => p.cat === filter);
 
-  useEffect(() => { window.scrollTo(0,0); }, []);
+  useEffect(() => { 
+    window.scrollTo(0,0); 
+    const timer = setTimeout(() => setShowPromo(true), 6000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="w-full">
@@ -39,13 +45,42 @@ export default function Shop() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent flex flex-col justify-end p-5 transform translate-y-2 transition-transform duration-300 group-hover:translate-y-0">
                 <h3 className="font-bebas text-2xl tracking-wider text-kemon-cream">{p.name}</h3>
                 <p className="text-[0.62rem] tracking-[0.18em] uppercase text-kemon-cream/50 mt-1">{p.cat}</p>
-                <p className="font-playfair italic text-kemon-orange text-base mt-2">₹{p.price}</p>
+                <p className="font-playfair italic text-kemon-orange text-base mt-2">
+                  <span className="text-kemon-soft/50 line-through mr-2">₹{p.mrp}</span>₹{p.price}
+                </p>
               </div>
             </Link>
           ))}
         </div>
         {filtered.length === 0 && <div className="text-center py-20 text-kemon-soft">No products found in this category.</div>}
       </section>
+
+      {/* The Silent Concierge Promo Popup */}
+      <div 
+        className={`fixed bottom-8 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-12 z-[500] bg-kemon-char/90 backdrop-blur-md border border-kemon-ghost p-5 shadow-2xl transition-all duration-700 w-[90vw] md:w-[340px] ${
+          showPromo ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12 pointer-events-none'
+        }`}
+      >
+        <button 
+          onClick={() => setShowPromo(false)} 
+          className="absolute top-4 right-4 text-kemon-soft hover:text-kemon-orange transition-colors"
+        >
+          <X size={16} />
+        </button>
+        <div className="flex items-start gap-4">
+          <div className="w-10 h-10 shrink-0 bg-kemon-orange/10 rounded-full flex items-center justify-center text-kemon-orange mt-1">
+            <Gift size={18} />
+          </div>
+          <div>
+            <p className="text-[0.6rem] tracking-[0.2em] font-medium text-kemon-orange uppercase mb-1">The Vault is Open</p>
+            <h4 className="font-bebas text-2xl tracking-widest text-kemon-cream mb-2">Build Your Bundle</h4>
+            <p className="text-sm font-light text-kemon-soft leading-relaxed italic border-l border-kemon-orange/30 pl-3">
+              Unlock complimentary pairs automatically. <br/>
+              <span className="font-medium text-kemon-cream not-italic text-[0.7rem] uppercase tracking-widest mt-2 shadow-[0_4px_14px_0_rgba(244,97,26,0.1)] inline-block px-2 py-1 bg-kemon-char border border-kemon-ghost">Buy 2 Get 2 Free • Buy 3 Get 3 Free</span>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

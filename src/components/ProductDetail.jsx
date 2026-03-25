@@ -46,7 +46,11 @@ export default function ProductDetail() {
         <div className="flex flex-col justify-center">
           <p className="text-[0.65rem] tracking-[0.2em] uppercase text-kemon-orange mb-3">// {product.cat}</p>
           <h1 className="font-bebas text-5xl md:text-7xl tracking-wide leading-none">{product.name}</h1>
-          <p className="font-playfair italic text-kemon-soft text-xl mt-3">₹{product.price}</p>
+          <div className="flex items-center gap-3 mt-3">
+            <p className="font-playfair italic text-kemon-soft/50 line-through text-lg">₹{product.mrp}</p>
+            <p className="font-playfair italic text-kemon-orange text-2xl">₹{product.price}</p>
+            <span className="bg-kemon-orange/10 text-kemon-orange border border-kemon-orange/20 text-[0.6rem] uppercase tracking-widest px-2 py-0.5 rounded-sm">Save ₹{product.mrp - product.price}</span>
+          </div>
           
           <div className="h-[1px] w-full bg-kemon-ghost my-8"></div>
           

@@ -136,7 +136,10 @@ export default function Checkout() {
                   <h4 className="font-bebas text-lg tracking-wider text-kemon-cream">{item.name}</h4>
                   <p className="text-[0.55rem] uppercase tracking-widest text-kemon-soft">Size: {item.size}</p>
                 </div>
-                <p className="font-playfair italic text-kemon-orange text-sm">₹{item.price * item.quantity}</p>
+                <div className="text-right">
+                  <p className="font-playfair italic text-kemon-soft/50 line-through text-[0.6rem]">₹{item.mrp * item.quantity}</p>
+                  <p className="font-playfair italic text-kemon-orange text-sm">₹{item.price * item.quantity}</p>
+                </div>
               </div>
             ))}
           </div>
